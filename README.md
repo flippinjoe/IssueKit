@@ -2,11 +2,20 @@
 A drop-in component for creating GitHub issues in your app.
 **You should only have this in debug builds.**
 
+![Screenshot](http://i.imgur.com/OmeEU2d.png?1)
+
 # How to use
 
 Get an API access token from [GitHub ](https://github.com/settings/applications):
 
 ![Access token image](http://i.imgur.com/cJqyqam.png)
+
+Go to the IssueKit directory in Terminal and run
+
+```bash
+sudo gem install cocoapods
+pod install
+```
 
 Setup `ISKIssueManager` in `application:didFinishLaunchingWithOptions:`
 
