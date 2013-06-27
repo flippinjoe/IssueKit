@@ -26,4 +26,4 @@ Call `-presentIssueViewControllerOnViewController` when you want to show the iss
 }
 ```
 
-That's it!
+That's it! IssueKit will create an issue with an 'IssueKit' label on the repo you specified.
