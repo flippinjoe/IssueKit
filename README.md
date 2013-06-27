@@ -4,7 +4,9 @@ A drop-in component for creating GitHub issues in your app.
 
 # How to use
 
-Get an API access token from [GitHub](https://github.com/settings/applications).
+Get an API access token from [GitHub ](https://github.com/settings/applications):
+
+![Access token image](http://i.imgur.com/cJqyqam.png)
 
 Setup `ISKIssueManager` in `application:didFinishLaunchingWithOptions:`
 
