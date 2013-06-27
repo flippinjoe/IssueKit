@@ -2,7 +2,7 @@
 A drop-in component for creating GitHub issues in your app.
 **You should only have this in debug builds.**
 
-![Screenshot](http://i.imgur.com/OmeEU2d.png?1)
+![Screenshot](http://i.imgur.com/OmeEU2dl.png?1)
 
 # How to use
 
