@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods.xcscheme</key>
+		<key>IssueKit.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,22 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4CEF45CD6CA8434BAF8F92F9</key>
+		<key>4126F858177B8F9C002DC52A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>59D9092307464555ACECA7A0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CA56CCCBDEA74B1784307F80</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D0CB86FAEA114EAF983962EB</key>
+		<key>4126F879177B8F9C002DC52A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
