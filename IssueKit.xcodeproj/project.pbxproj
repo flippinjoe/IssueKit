@@ -19,8 +19,11 @@
 		4126F87C177B8F9C002DC52A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4126F87B177B8F9C002DC52A /* XCTest.framework */; };
 		4126F87D177B8F9C002DC52A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4126F85C177B8F9C002DC52A /* Foundation.framework */; };
 		4126F87E177B8F9C002DC52A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4126F860177B8F9C002DC52A /* UIKit.framework */; };
-		4126F886177B8F9C002DC52A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4126F884177B8F9C002DC52A /* InfoPlist.strings */; };
-		4126F888177B8F9C002DC52A /* IssueKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4126F887177B8F9C002DC52A /* IssueKitTests.m */; };
+		41466250177B949000E7F3E6 /* ISKIssueManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4146624F177B911900E7F3E6 /* ISKIssueManager.m */; };
+		41466251177B949200E7F3E6 /* ISKIssueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4146624C177B90E200E7F3E6 /* ISKIssueViewController.m */; };
+		41558FA5177CB9E2008EC374 /* ISKGitHubIssueAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 41558FA4177CB9E2008EC374 /* ISKGitHubIssueAPIClient.m */; };
+		41558FA8177CBB2F008EC374 /* ISKIssue.m in Sources */ = {isa = PBXBuildFile; fileRef = 41558FA7177CBB2F008EC374 /* ISKIssue.m */; };
+		50351314F8274426AD63EBCF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13E7D6996A774E2E990E1E04 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13E7D6996A774E2E990E1E04 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4126F859177B8F9C002DC52A /* IssueKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IssueKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4126F85C177B8F9C002DC52A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4126F85E177B8F9C002DC52A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -50,9 +54,16 @@
 		4126F874177B8F9C002DC52A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4126F87A177B8F9C002DC52A /* IssueKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IssueKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4126F87B177B8F9C002DC52A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = System/Library/Frameworks/XCTest.framework; sourceTree = SDKROOT; };
-		4126F883177B8F9C002DC52A /* IssueKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IssueKitTests-Info.plist"; sourceTree = "<group>"; };
-		4126F885177B8F9C002DC52A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		4126F887177B8F9C002DC52A /* IssueKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IssueKitTests.m; sourceTree = "<group>"; };
+		4146624B177B90E200E7F3E6 /* ISKIssueViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISKIssueViewController.h; sourceTree = "<group>"; };
+		4146624C177B90E200E7F3E6 /* ISKIssueViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ISKIssueViewController.m; sourceTree = "<group>"; };
+		4146624E177B911900E7F3E6 /* ISKIssueManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISKIssueManager.h; sourceTree = "<group>"; };
+		4146624F177B911900E7F3E6 /* ISKIssueManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ISKIssueManager.m; sourceTree = "<group>"; };
+		41558FA3177CB9E2008EC374 /* ISKGitHubIssueAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISKGitHubIssueAPIClient.h; sourceTree = "<group>"; };
+		41558FA4177CB9E2008EC374 /* ISKGitHubIssueAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISKGitHubIssueAPIClient.m; sourceTree = "<group>"; };
+		41558FA6177CBB2F008EC374 /* ISKIssue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISKIssue.h; sourceTree = "<group>"; };
+		41558FA7177CBB2F008EC374 /* ISKIssue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISKIssue.m; sourceTree = "<group>"; };
+		41558FAA177CEA51008EC374 /* IssueKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IssueKit.h; sourceTree = "<group>"; };
+		A6D8F72469D246E597301C57 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +74,7 @@
 				4126F85F177B8F9C002DC52A /* CoreGraphics.framework in Frameworks */,
 				4126F861177B8F9C002DC52A /* UIKit.framework in Frameworks */,
 				4126F85D177B8F9C002DC52A /* Foundation.framework in Frameworks */,
+				50351314F8274426AD63EBCF /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,8 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				4126F862177B8F9C002DC52A /* IssueKit */,
-				4126F881177B8F9C002DC52A /* IssueKitTests */,
 				4126F85B177B8F9C002DC52A /* Frameworks */,
+				A6D8F72469D246E597301C57 /* Pods.xcconfig */,
 				4126F85A177B8F9C002DC52A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,6 +117,7 @@
 				4126F85E177B8F9C002DC52A /* CoreGraphics.framework */,
 				4126F860177B8F9C002DC52A /* UIKit.framework */,
 				4126F87B177B8F9C002DC52A /* XCTest.framework */,
+				13E7D6996A774E2E990E1E04 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -117,6 +130,7 @@
 				4126F86E177B8F9C002DC52A /* Main.storyboard */,
 				4126F871177B8F9C002DC52A /* ISKViewController.h */,
 				4126F872177B8F9C002DC52A /* ISKViewController.m */,
+				4146624D177B90E600E7F3E6 /* IssueKit */,
 				4126F874177B8F9C002DC52A /* Images.xcassets */,
 				4126F863177B8F9C002DC52A /* Supporting Files */,
 			);
@@ -134,22 +148,28 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		4126F881177B8F9C002DC52A /* IssueKitTests */ = {
+		4146624D177B90E600E7F3E6 /* IssueKit */ = {
 			isa = PBXGroup;
 			children = (
-				4126F887177B8F9C002DC52A /* IssueKitTests.m */,
-				4126F882177B8F9C002DC52A /* Supporting Files */,
+				41558FAA177CEA51008EC374 /* IssueKit.h */,
+				4146624E177B911900E7F3E6 /* ISKIssueManager.h */,
+				4146624F177B911900E7F3E6 /* ISKIssueManager.m */,
+				4146624B177B90E200E7F3E6 /* ISKIssueViewController.h */,
+				4146624C177B90E200E7F3E6 /* ISKIssueViewController.m */,
+				41558FA9177CBB37008EC374 /* API */,
 			);
-			path = IssueKitTests;
+			name = IssueKit;
 			sourceTree = "<group>";
 		};
-		4126F882177B8F9C002DC52A /* Supporting Files */ = {
+		41558FA9177CBB37008EC374 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				4126F883177B8F9C002DC52A /* IssueKitTests-Info.plist */,
-				4126F884177B8F9C002DC52A /* InfoPlist.strings */,
+				41558FA3177CB9E2008EC374 /* ISKGitHubIssueAPIClient.h */,
+				41558FA4177CB9E2008EC374 /* ISKGitHubIssueAPIClient.m */,
+				41558FA6177CBB2F008EC374 /* ISKIssue.h */,
+				41558FA7177CBB2F008EC374 /* ISKIssue.m */,
 			);
-			name = "Supporting Files";
+			name = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,9 +179,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4126F88B177B8F9C002DC52A /* Build configuration list for PBXNativeTarget "IssueKit" */;
 			buildPhases = (
+				A2E378D6E1C64D358DA4A907 /* Check Pods Manifest.lock */,
 				4126F855177B8F9C002DC52A /* Sources */,
 				4126F856177B8F9C002DC52A /* Frameworks */,
 				4126F857177B8F9C002DC52A /* Resources */,
+				BCF512A2730E42998535414F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -239,11 +261,41 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4126F886177B8F9C002DC52A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A2E378D6E1C64D358DA4A907 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+		BCF512A2730E42998535414F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4126F855177B8F9C002DC52A /* Sources */ = {
@@ -252,7 +304,11 @@
 			files = (
 				4126F86D177B8F9C002DC52A /* ISKAppDelegate.m in Sources */,
 				4126F873177B8F9C002DC52A /* ISKViewController.m in Sources */,
+				41558FA5177CB9E2008EC374 /* ISKGitHubIssueAPIClient.m in Sources */,
 				4126F869177B8F9C002DC52A /* main.m in Sources */,
+				41466250177B949000E7F3E6 /* ISKIssueManager.m in Sources */,
+				41466251177B949200E7F3E6 /* ISKIssueViewController.m in Sources */,
+				41558FA8177CBB2F008EC374 /* ISKIssue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +316,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4126F888177B8F9C002DC52A /* IssueKitTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,14 +344,6 @@
 				4126F86F177B8F9C002DC52A /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		4126F884177B8F9C002DC52A /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4126F885177B8F9C002DC52A /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -372,12 +419,14 @@
 		};
 		4126F88C177B8F9C002DC52A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6D8F72469D246E597301C57 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IssueKit/IssueKit-Prefix.pch";
 				INFOPLIST_FILE = "IssueKit/IssueKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -385,12 +434,14 @@
 		};
 		4126F88D177B8F9C002DC52A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6D8F72469D246E597301C57 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IssueKit/IssueKit-Prefix.pch";
 				INFOPLIST_FILE = "IssueKit/IssueKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -453,6 +504,7 @@
 				4126F88D177B8F9C002DC52A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4126F88E177B8F9C002DC52A /* Build configuration list for PBXNativeTarget "IssueKitTests" */ = {
 			isa = XCConfigurationList;
@@ -461,6 +513,7 @@
 				4126F890177B8F9C002DC52A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

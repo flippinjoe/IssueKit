@@ -7,12 +7,13 @@
 //
 
 #import "ISKAppDelegate.h"
+#import "IssueKit.h"
 
 @implementation ISKAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [[ISKIssueManager defaultManager] setupWithReponame:@"usepropeller/ios" andAccessToken:@"a72b608c7cbfbef9fb8e91fea423f2ea13865648"];
     return YES;
 }
 							

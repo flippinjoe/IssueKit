@@ -1,5 +1,5 @@
 //
-//  ISKViewController.h
+//  ISKIssueViewController.h
 //  IssueKit
 //
 //  Created by Mert Dümenci on 6/26/13.
@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ISKViewController : UIViewController
-- (IBAction)showIssueViewController:(id)sender;
+@interface ISKIssueViewController : UITableViewController
+
+@property (nonatomic, weak) UIViewController *ownerController;
 
 @end
