@@ -13,7 +13,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [[ISKIssueManager defaultManager] setupWithReponame:@"" andAccessToken:@""];
+    [[ISKIssueManager defaultManager] setupWithReponame:@"usepropeller/IssueKit" andAccessToken:@"21b070d6ae535fd5474ac1b16f9c0cf2837c62c4"];
     return YES;
 }
 							

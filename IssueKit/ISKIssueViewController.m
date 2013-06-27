@@ -10,6 +10,12 @@
 #import <SVProgressHUD/SVProgressHUD.h>
 #import "ISKIssueManager.h"
 
+/*
+    Sorry for this nasty macro. iOS 6 cells don't like to give the font & frame size of it's text label before it gets added to the view hierarchy. :(
+*/
+
+#define IS_IOS7 !([[[UIDevice currentDevice] systemVersion] floatValue] < 7.0f)
+
 @interface ISKIssueViewController ()
 - (void)cancelButtonItemPressed:(id)action;
 @end
@@ -77,13 +83,22 @@
                 break;
         }
         
-        CGFloat textFieldWidth = cell.frame.size.width - 20 * 2 - cell.textLabel.frame.size.width;
+        CGSize textLabelSize = cell.textLabel.frame.size;
+        
+        if (!IS_IOS7) {
+            CGSize fontSize = [cell.textLabel.text sizeWithFont:[UIFont boldSystemFontOfSize:18.f]];
+            textLabelSize = CGSizeMake(fontSize.width + 8, fontSize.height);
+        }
+        
+        CGFloat textFieldWidth = cell.frame.size.width - 20 * 2 - textLabelSize.width;
         CGFloat textFieldHeight = 40;
         
-        UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(cell.frame.size.width - 20 - textFieldWidth, cell.frame.size.height / 2 - textFieldHeight / 2, textFieldWidth, textFieldHeight)];
+        UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(cell.contentView.bounds.size.width - 20 - textFieldWidth, cell.contentView.bounds.size.height / 2 - textFieldHeight / 2, textFieldWidth, textFieldHeight)];
         
         textField.tag = 100;
         textField.textAlignment = NSTextAlignmentRight;
+        textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        
         [cell.contentView addSubview:textField];
         
         return cell;
@@ -96,8 +111,16 @@
         UILabel *buttonLabel = [[UILabel alloc] initWithFrame:cell.contentView.bounds];
         buttonLabel.textAlignment = NSTextAlignmentCenter;
         buttonLabel.backgroundColor = [UIColor clearColor];
-        buttonLabel.font = cell.textLabel.font;
-        buttonLabel.textColor = cell.textLabel.textColor;
+        
+        if (IS_IOS7) {
+            buttonLabel.font = cell.textLabel.font;
+            buttonLabel.textColor = cell.textLabel.textColor;
+        }
+    
+        else {
+            buttonLabel.font = [UIFont boldSystemFontOfSize:18.f];
+            buttonLabel.textColor = [UIColor blackColor];
+        }
         
         buttonLabel.text = @"Submit";
         
@@ -115,6 +138,7 @@
     UITextField *textField = (UITextField *)[cell viewWithTag:100];
     
     if (textField) {
+        [tableView deselectRowAtIndexPath:indexPath animated:NO];
         [textField becomeFirstResponder];
     }
     
