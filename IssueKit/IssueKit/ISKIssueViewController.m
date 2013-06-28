@@ -28,7 +28,7 @@
 {
     [super viewDidLoad];
     
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < 2; i++) {
         [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:[NSString stringWithFormat:@"cell%d", i+1]];
     }
     
@@ -60,30 +60,11 @@
     UITableViewCell *cell;
     
     if (indexPath.section == 0) {
-        switch (indexPath.row) {
-            case 0:
-            {
-                static NSString *dequeueID = @"cell1";
-                cell = [tableView dequeueReusableCellWithIdentifier:dequeueID forIndexPath:indexPath];
-                
-                cell.textLabel.text = @"Title";
-                [cell.textLabel sizeToFit];
-            }
-                break;
-                
-            case 1:
-            {
-                static NSString *dequeueID = @"cell2";
-                cell = [tableView dequeueReusableCellWithIdentifier:dequeueID forIndexPath:indexPath];
-                
-                cell.textLabel.text = @"Description";
-                [cell.textLabel sizeToFit];
-            }
-                break;
-                
-            default:
-                break;
-        }
+        static NSString *dequeueID = @"cell1";
+        cell = [tableView dequeueReusableCellWithIdentifier:dequeueID forIndexPath:indexPath];
+        
+        cell.textLabel.text = indexPath.row == 0 ? @"Title" : @"Description";
+        [cell.textLabel sizeToFit];
         
         CGSize textLabelSize = cell.textLabel.frame.size;
         
@@ -107,7 +88,7 @@
     }
     
     else {
-        static NSString *dequeueID = @"cell3";
+        static NSString *dequeueID = @"cell2";
         cell = [tableView dequeueReusableCellWithIdentifier:dequeueID forIndexPath:indexPath];
         
         UILabel *buttonLabel = [[UILabel alloc] initWithFrame:cell.contentView.bounds];

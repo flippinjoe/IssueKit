@@ -13,7 +13,9 @@
 #define kIssueColor @"3f61ff"
 
 @interface ISKIssueManager : NSObject
+
 @property (nonatomic, readonly) NSString *reponame;
+@property (nonatomic, retain) UITapGestureRecognizer *tapGestureRecognizer;
 
 + (instancetype)defaultManager;
 
@@ -23,8 +25,14 @@
  */
 
 - (void)setupWithReponame:(NSString *)reponame andAccessToken:(NSString *)accessToken;
+- (void)createNewIssueWithTitle:(NSString *)title body:(NSString *)body success:(IssueCreateBlock)successBlock error:(IssueErrorBlock)errorBlock;
 
 - (void)presentIssueViewControllerOnViewController:(UIViewController *)viewController;
-- (void)createNewIssueWithTitle:(NSString *)title body:(NSString *)body success:(IssueCreateBlock)successBlock error:(IssueErrorBlock)errorBlock;
+
+/*
+    Experimental feature which installs a 3-finger-double-tap gesture on UIWindow.
+*/
+
+- (void)installGestureOnWindow:(UIWindow *)window;
 
 @end

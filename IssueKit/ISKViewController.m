@@ -20,6 +20,9 @@
     [super viewDidLoad];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+}
+
 - (IBAction)showIssueViewController:(id)sender {
     [[ISKIssueManager defaultManager] presentIssueViewControllerOnViewController:self];
 }
