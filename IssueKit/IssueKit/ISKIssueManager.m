@@ -80,7 +80,6 @@
 #pragma mark Gesture Recognizer Callback
 
 - (void)gestureRecognizerDidFire:(UITapGestureRecognizer *)gestureRecognizer {
-    NSLog(@"YO");
     [self presentIssueViewControllerOnViewController:topMostController()];
 }
 
