@@ -47,4 +47,6 @@
 
 - (void)installGestureOnWindow:(UIWindow *)window;
 
+- (BOOL)hasImageUploads;
+
 @end

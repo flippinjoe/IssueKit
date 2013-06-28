@@ -49,7 +49,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return section == 0? 3 : 1;
+    if ([ISKIssueManager defaultManager].hasImageUploads) return section == 0? 3 : 1;
+    else return section == 0? 2 : 1;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {

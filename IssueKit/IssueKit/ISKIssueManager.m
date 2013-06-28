@@ -134,4 +134,8 @@ UIViewController *topMostController() {
     return topController;
 }
 
+- (BOOL)hasImageUploads {
+    return (_imgurAPIClient != nil);
+}
+
 @end
