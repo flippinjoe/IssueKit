@@ -14,7 +14,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [[ISKIssueManager defaultManager] setupWithReponame:@"usepropeller/IssueKit" andAccessToken:@"no u"];
-    
+    [[ISKIssueManager defaultManager] setupImageUploadsWithClientID:@"no u"];
     [[ISKIssueManager defaultManager] installGestureOnWindow:self.window];
     
     return YES;

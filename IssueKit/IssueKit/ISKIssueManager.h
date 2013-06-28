@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+
 #import "ISKGitHubIssueAPIClient.h"
+#import "ISKImgurAPIClient.h"
 
 #define kIssueLabel @"IssueKit"
 #define kIssueColor @"3f61ff"
@@ -25,7 +27,17 @@
  */
 
 - (void)setupWithReponame:(NSString *)reponame andAccessToken:(NSString *)accessToken;
+
+/*
+    Image uploads are optional.
+    If you want to utilize them, get an imgur client ID by registering your application as 'anonymous' here:
+    http://api.imgur.com/oauth2/addclient
+*/
+
+- (void)setupImageUploadsWithClientID:(NSString *)clientID;
 - (void)createNewIssueWithTitle:(NSString *)title body:(NSString *)body success:(IssueCreateBlock)successBlock error:(IssueErrorBlock)errorBlock;
+- (void)createNewIssueWithTitle:(NSString *)title body:(NSString *)body image:(UIImage *)image success:(IssueCreateBlock)successBlock error:(IssueErrorBlock)errorBlock;
+
 
 - (void)presentIssueViewControllerOnViewController:(UIViewController *)viewController;
 

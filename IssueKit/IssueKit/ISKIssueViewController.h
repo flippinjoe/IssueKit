@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuickLook/QuickLook.h>
 
-@interface ISKIssueViewController : UITableViewController
+@interface ISKIssueViewController : UITableViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, QLPreviewControllerDataSource, QLPreviewControllerDelegate>
 
 @property (nonatomic, weak) UIViewController *ownerController;
 
