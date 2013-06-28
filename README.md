@@ -2,13 +2,17 @@
 A drop-in component for creating GitHub issues in your app.
 **You should only have this in debug builds.**
 
-![Screenshot](http://i.imgur.com/OmeEU2dl.png?1)
+![Screenshot](http://i.imgur.com/vyjd3sMl.png?1)
 
 # How to use
 
 Get an API access token from [GitHub ](https://github.com/settings/applications):
 
 ![Access token image](http://i.imgur.com/cJqyqam.png)
+
+And **if you want image uploads**, [create an 'anonymous' imgur application](http://api.imgur.com/oauth2/addclient) and note its client ID.
+
+![Client ID image](http://i.imgur.com/ZH3YA4B.png)
 
 Go to the IssueKit directory in Terminal and run
 
@@ -25,6 +29,10 @@ Setup `ISKIssueManager` in `application:didFinishLaunchingWithOptions:`
     // Reponame must be in 'username/reponame' format.
 
     [[ISKIssueManager defaultManager] setupWithReponame:@"usepropeller/IssueKit" andAccessToken:@"access token"];
+
+    // If you have an imgur client ID
+    [[ISKIssueManager defaultManager] setupImageUploadsWithClientID:@"your key here"];
+
     return YES;
 }
 ```

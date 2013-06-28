@@ -19,6 +19,8 @@
 		4126F87C177B8F9C002DC52A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4126F87B177B8F9C002DC52A /* XCTest.framework */; };
 		4126F87D177B8F9C002DC52A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4126F85C177B8F9C002DC52A /* Foundation.framework */; };
 		4126F87E177B8F9C002DC52A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4126F860177B8F9C002DC52A /* UIKit.framework */; };
+		41588AD6177E32B40020981E /* ISKImgurAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 41588AD5177E32B40020981E /* ISKImgurAPIClient.m */; };
+		41588ADA177E427C0020981E /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41588AD9177E427C0020981E /* QuickLook.framework */; };
 		41D44CD3177E0DBA00F3E061 /* ISKIssueManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D44CCF177E0DBA00F3E061 /* ISKIssueManager.m */; };
 		41D44CD4177E0DBA00F3E061 /* ISKIssueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D44CD1177E0DBA00F3E061 /* ISKIssueViewController.m */; };
 		41D44CD9177E0DC300F3E061 /* ISKGitHubIssueAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D44CD6177E0DC300F3E061 /* ISKGitHubIssueAPIClient.m */; };
@@ -54,6 +56,9 @@
 		4126F874177B8F9C002DC52A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4126F87A177B8F9C002DC52A /* IssueKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IssueKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4126F87B177B8F9C002DC52A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = System/Library/Frameworks/XCTest.framework; sourceTree = SDKROOT; };
+		41588AD4177E32B40020981E /* ISKImgurAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISKImgurAPIClient.h; sourceTree = "<group>"; };
+		41588AD5177E32B40020981E /* ISKImgurAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISKImgurAPIClient.m; sourceTree = "<group>"; };
+		41588AD9177E427C0020981E /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 		41D44CCE177E0DBA00F3E061 /* ISKIssueManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ISKIssueManager.h; path = IssueKit/ISKIssueManager.h; sourceTree = "<group>"; };
 		41D44CCF177E0DBA00F3E061 /* ISKIssueManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ISKIssueManager.m; path = IssueKit/ISKIssueManager.m; sourceTree = "<group>"; };
 		41D44CD0177E0DBA00F3E061 /* ISKIssueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ISKIssueViewController.h; path = IssueKit/ISKIssueViewController.h; sourceTree = "<group>"; };
@@ -71,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41588ADA177E427C0020981E /* QuickLook.framework in Frameworks */,
 				4126F85F177B8F9C002DC52A /* CoreGraphics.framework in Frameworks */,
 				4126F861177B8F9C002DC52A /* UIKit.framework in Frameworks */,
 				4126F85D177B8F9C002DC52A /* Foundation.framework in Frameworks */,
@@ -113,6 +119,7 @@
 		4126F85B177B8F9C002DC52A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				41588AD9177E427C0020981E /* QuickLook.framework */,
 				4126F85C177B8F9C002DC52A /* Foundation.framework */,
 				4126F85E177B8F9C002DC52A /* CoreGraphics.framework */,
 				4126F860177B8F9C002DC52A /* UIKit.framework */,
@@ -166,6 +173,8 @@
 			children = (
 				41D44CD5177E0DC300F3E061 /* ISKGitHubIssueAPIClient.h */,
 				41D44CD6177E0DC300F3E061 /* ISKGitHubIssueAPIClient.m */,
+				41588AD4177E32B40020981E /* ISKImgurAPIClient.h */,
+				41588AD5177E32B40020981E /* ISKImgurAPIClient.m */,
 				41D44CD7177E0DC300F3E061 /* ISKIssue.h */,
 				41D44CD8177E0DC300F3E061 /* ISKIssue.m */,
 			);
@@ -304,6 +313,7 @@
 			files = (
 				41D44CD9177E0DC300F3E061 /* ISKGitHubIssueAPIClient.m in Sources */,
 				41D44CDA177E0DC300F3E061 /* ISKIssue.m in Sources */,
+				41588AD6177E32B40020981E /* ISKImgurAPIClient.m in Sources */,
 				4126F86D177B8F9C002DC52A /* ISKAppDelegate.m in Sources */,
 				4126F873177B8F9C002DC52A /* ISKViewController.m in Sources */,
 				4126F869177B8F9C002DC52A /* main.m in Sources */,
