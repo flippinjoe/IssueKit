@@ -19,10 +19,10 @@
 		4126F87C177B8F9C002DC52A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4126F87B177B8F9C002DC52A /* XCTest.framework */; };
 		4126F87D177B8F9C002DC52A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4126F85C177B8F9C002DC52A /* Foundation.framework */; };
 		4126F87E177B8F9C002DC52A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4126F860177B8F9C002DC52A /* UIKit.framework */; };
-		41466250177B949000E7F3E6 /* ISKIssueManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4146624F177B911900E7F3E6 /* ISKIssueManager.m */; };
-		41466251177B949200E7F3E6 /* ISKIssueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4146624C177B90E200E7F3E6 /* ISKIssueViewController.m */; };
-		41558FA5177CB9E2008EC374 /* ISKGitHubIssueAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 41558FA4177CB9E2008EC374 /* ISKGitHubIssueAPIClient.m */; };
-		41558FA8177CBB2F008EC374 /* ISKIssue.m in Sources */ = {isa = PBXBuildFile; fileRef = 41558FA7177CBB2F008EC374 /* ISKIssue.m */; };
+		41D44CD3177E0DBA00F3E061 /* ISKIssueManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D44CCF177E0DBA00F3E061 /* ISKIssueManager.m */; };
+		41D44CD4177E0DBA00F3E061 /* ISKIssueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D44CD1177E0DBA00F3E061 /* ISKIssueViewController.m */; };
+		41D44CD9177E0DC300F3E061 /* ISKGitHubIssueAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D44CD6177E0DC300F3E061 /* ISKGitHubIssueAPIClient.m */; };
+		41D44CDA177E0DC300F3E061 /* ISKIssue.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D44CD8177E0DC300F3E061 /* ISKIssue.m */; };
 		50351314F8274426AD63EBCF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13E7D6996A774E2E990E1E04 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -54,15 +54,15 @@
 		4126F874177B8F9C002DC52A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4126F87A177B8F9C002DC52A /* IssueKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IssueKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4126F87B177B8F9C002DC52A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = System/Library/Frameworks/XCTest.framework; sourceTree = SDKROOT; };
-		4146624B177B90E200E7F3E6 /* ISKIssueViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISKIssueViewController.h; sourceTree = "<group>"; };
-		4146624C177B90E200E7F3E6 /* ISKIssueViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ISKIssueViewController.m; sourceTree = "<group>"; };
-		4146624E177B911900E7F3E6 /* ISKIssueManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISKIssueManager.h; sourceTree = "<group>"; };
-		4146624F177B911900E7F3E6 /* ISKIssueManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ISKIssueManager.m; sourceTree = "<group>"; };
-		41558FA3177CB9E2008EC374 /* ISKGitHubIssueAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISKGitHubIssueAPIClient.h; sourceTree = "<group>"; };
-		41558FA4177CB9E2008EC374 /* ISKGitHubIssueAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISKGitHubIssueAPIClient.m; sourceTree = "<group>"; };
-		41558FA6177CBB2F008EC374 /* ISKIssue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISKIssue.h; sourceTree = "<group>"; };
-		41558FA7177CBB2F008EC374 /* ISKIssue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISKIssue.m; sourceTree = "<group>"; };
-		41558FAA177CEA51008EC374 /* IssueKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IssueKit.h; sourceTree = "<group>"; };
+		41D44CCE177E0DBA00F3E061 /* ISKIssueManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ISKIssueManager.h; path = IssueKit/ISKIssueManager.h; sourceTree = "<group>"; };
+		41D44CCF177E0DBA00F3E061 /* ISKIssueManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ISKIssueManager.m; path = IssueKit/ISKIssueManager.m; sourceTree = "<group>"; };
+		41D44CD0177E0DBA00F3E061 /* ISKIssueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ISKIssueViewController.h; path = IssueKit/ISKIssueViewController.h; sourceTree = "<group>"; };
+		41D44CD1177E0DBA00F3E061 /* ISKIssueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ISKIssueViewController.m; path = IssueKit/ISKIssueViewController.m; sourceTree = "<group>"; };
+		41D44CD2177E0DBA00F3E061 /* IssueKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IssueKit.h; path = IssueKit/IssueKit.h; sourceTree = "<group>"; };
+		41D44CD5177E0DC300F3E061 /* ISKGitHubIssueAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ISKGitHubIssueAPIClient.h; path = IssueKit/ISKGitHubIssueAPIClient.h; sourceTree = "<group>"; };
+		41D44CD6177E0DC300F3E061 /* ISKGitHubIssueAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ISKGitHubIssueAPIClient.m; path = IssueKit/ISKGitHubIssueAPIClient.m; sourceTree = "<group>"; };
+		41D44CD7177E0DC300F3E061 /* ISKIssue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ISKIssue.h; path = IssueKit/ISKIssue.h; sourceTree = "<group>"; };
+		41D44CD8177E0DC300F3E061 /* ISKIssue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ISKIssue.m; path = IssueKit/ISKIssue.m; sourceTree = "<group>"; };
 		A6D8F72469D246E597301C57 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -151,11 +151,11 @@
 		4146624D177B90E600E7F3E6 /* IssueKit */ = {
 			isa = PBXGroup;
 			children = (
-				41558FAA177CEA51008EC374 /* IssueKit.h */,
-				4146624E177B911900E7F3E6 /* ISKIssueManager.h */,
-				4146624F177B911900E7F3E6 /* ISKIssueManager.m */,
-				4146624B177B90E200E7F3E6 /* ISKIssueViewController.h */,
-				4146624C177B90E200E7F3E6 /* ISKIssueViewController.m */,
+				41D44CD2177E0DBA00F3E061 /* IssueKit.h */,
+				41D44CCE177E0DBA00F3E061 /* ISKIssueManager.h */,
+				41D44CCF177E0DBA00F3E061 /* ISKIssueManager.m */,
+				41D44CD0177E0DBA00F3E061 /* ISKIssueViewController.h */,
+				41D44CD1177E0DBA00F3E061 /* ISKIssueViewController.m */,
 				41558FA9177CBB37008EC374 /* API */,
 			);
 			name = IssueKit;
@@ -164,10 +164,10 @@
 		41558FA9177CBB37008EC374 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				41558FA3177CB9E2008EC374 /* ISKGitHubIssueAPIClient.h */,
-				41558FA4177CB9E2008EC374 /* ISKGitHubIssueAPIClient.m */,
-				41558FA6177CBB2F008EC374 /* ISKIssue.h */,
-				41558FA7177CBB2F008EC374 /* ISKIssue.m */,
+				41D44CD5177E0DC300F3E061 /* ISKGitHubIssueAPIClient.h */,
+				41D44CD6177E0DC300F3E061 /* ISKGitHubIssueAPIClient.m */,
+				41D44CD7177E0DC300F3E061 /* ISKIssue.h */,
+				41D44CD8177E0DC300F3E061 /* ISKIssue.m */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -302,13 +302,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41D44CD9177E0DC300F3E061 /* ISKGitHubIssueAPIClient.m in Sources */,
+				41D44CDA177E0DC300F3E061 /* ISKIssue.m in Sources */,
 				4126F86D177B8F9C002DC52A /* ISKAppDelegate.m in Sources */,
 				4126F873177B8F9C002DC52A /* ISKViewController.m in Sources */,
-				41558FA5177CB9E2008EC374 /* ISKGitHubIssueAPIClient.m in Sources */,
 				4126F869177B8F9C002DC52A /* main.m in Sources */,
-				41466250177B949000E7F3E6 /* ISKIssueManager.m in Sources */,
-				41466251177B949200E7F3E6 /* ISKIssueViewController.m in Sources */,
-				41558FA8177CBB2F008EC374 /* ISKIssue.m in Sources */,
+				41D44CD4177E0DBA00F3E061 /* ISKIssueViewController.m in Sources */,
+				41D44CD3177E0DBA00F3E061 /* ISKIssueManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
