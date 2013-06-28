@@ -12,7 +12,7 @@
 
 @implementation ISKGitHubIssueAPIClient {
     @private
-    NSString *_api_token;
+    NSString *_apiToken;
 }
 
 - (id)initWithAPIToken:(NSString *)token {
@@ -21,7 +21,7 @@
     self = [self initWithBaseURL:[NSURL URLWithString:BASE_URL_STRING]];
     if (!self) return nil;
     
-    _api_token = token;
+    _apiToken = token;
     return self;
 }
 
@@ -41,7 +41,7 @@
 - (void)createIssue:(ISKIssue *)issue onRepoWithName:(NSString *)repoName success:(IssueCreateBlock)successBlock error:(IssueErrorBlock)errorBlock {
     NSMutableString *path = @"repos".mutableCopy;
     [path appendFormat:@"/%@", repoName];
-    [path appendFormat:@"/issues?access_token=%@", _api_token];
+    [path appendFormat:@"/issues?access_token=%@", _apiToken];
 
     NSMutableDictionary *parameters = @{}.mutableCopy;
     if (issue.title) parameters[@"title"] = issue.title;
@@ -69,7 +69,7 @@
 - (void)createLabel:(NSString *)label onRepoWithName:(NSString *)repoName withHexColorString:(NSString *)hexColorString success:(LabelCreateBlock)successBlock error:(LabelErrorBlock)errorBlock {
     NSMutableString *path = @"repos".mutableCopy;
     [path appendFormat:@"/%@", repoName];
-    [path appendFormat:@"/labels?access_token=%@", _api_token];
+    [path appendFormat:@"/labels?access_token=%@", _apiToken];
     
     NSMutableDictionary *parameters = @{}.mutableCopy;
     if (label) parameters[@"name"] = label;
