@@ -51,9 +51,9 @@
     ISKIssue *issue = [[ISKIssue alloc] init];
     issue.title = title;
     issue.body = body;
-    issue.label = kIssueLabel;
+    issue.labels = @[kIssueLabel];
     
-    [_apiClient createLabel:issue.label onRepoWithName:self.reponame withHexColorString:kIssueColor success:^(NSString *issueName) {
+    [_apiClient createLabel:kIssueLabel onRepoWithName:self.reponame withHexColorString:kIssueColor success:^(NSString *issueName) {
         [_apiClient createIssue:issue onRepoWithName:self.reponame success:successBlock error:errorBlock];
     } error:^(NSError *error) {
         errorBlock(error);

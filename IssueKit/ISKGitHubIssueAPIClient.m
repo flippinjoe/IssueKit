@@ -47,7 +47,7 @@
     if (issue.title) parameters[@"title"] = issue.title;
     if (issue.body) parameters[@"body"] = issue.body;
     if (issue.assignee) parameters[@"assignee"] = issue.assignee;
-    if (issue.label) parameters[@"labels"] = @[issue.label];
+    if (issue.labels) parameters[@"labels"] = issue.labels;
     
     [self postPath:path.copy parameters:parameters.copy success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSError *error;

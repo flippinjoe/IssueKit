@@ -12,4 +12,20 @@
 /*
     No u, NSCoding
 */
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{
+             @"title":@"title",
+             @"body":@"body",
+             @"assignee":@"assignee",
+             @"labels": @"labels",
+             @"identifier" : @"number",
+             @"URL": @"html_url"
+             };
+}
+
++ (NSValueTransformer *)URLJSONTransformer {
+    return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
+} 
+
 @end

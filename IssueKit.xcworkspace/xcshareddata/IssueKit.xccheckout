@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BB532324-D005-4184-A06F-44B15583FC1F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>IssueKit</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>54F20B07-8A0C-4C3B-B720-3B54F6875DAC</key>
+		<string>https://github.com/usepropeller/IssueKit.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>IssueKit.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>54F20B07-8A0C-4C3B-B720-3B54F6875DAC</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/usepropeller/IssueKit.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>54F20B07-8A0C-4C3B-B720-3B54F6875DAC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>54F20B07-8A0C-4C3B-B720-3B54F6875DAC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>IssueKit</string>
+		</dict>
+	</array>
+</dict>
+</plist>

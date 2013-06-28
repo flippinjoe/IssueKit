@@ -10,6 +10,8 @@
 #import <SVProgressHUD/SVProgressHUD.h>
 #import "ISKIssueManager.h"
 
+#import <Mantle/Mantle.h>
+
 /*
     Sorry for this nasty macro. iOS 6 cells don't like to give the font & frame size of it's text label before it gets added to the view hierarchy. :(
 */

@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Mantle/Mantle.h>
 
-@interface ISKIssue : NSObject
+@interface ISKIssue : MTLModel <MTLJSONSerializing>
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *body;
 @property (nonatomic, copy) NSString *assignee;
-@property (nonatomic, copy) NSString *label;
+@property (nonatomic, copy) NSArray *labels;
 
 @property (nonatomic, retain) NSNumber *identifier;
 @property (nonatomic, retain) NSURL *URL;
