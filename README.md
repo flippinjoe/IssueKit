@@ -1,4 +1,4 @@
-# IssueKit
+# [Imgur](http://i.imgur.com/jQteE5S) IssueKit
 A drop-in component for creating GitHub issues in your app.
 **You should only have this in debug builds.**
 
