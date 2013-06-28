@@ -12,6 +12,8 @@ Get an API access token from [GitHub ](https://github.com/settings/applications)
 
 And **if you want image uploads**, [create an 'anonymous' imgur application](http://api.imgur.com/oauth2/addclient) and note its client ID.
 
+![Client ID image](http://i.imgur.com/ZH3YA4B.png)
+
 Go to the IssueKit directory in Terminal and run
 
 ```bash
