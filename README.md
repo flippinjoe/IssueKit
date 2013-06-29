@@ -12,7 +12,7 @@ Get an API access token from your [GitHub settings](https://github.com/settings/
 
 If you want image uploads, [create an 'anonymous' Imgur application](http://api.imgur.com/oauth2/addclient) and note its client ID.
 
-![Client ID image](http://i.imgur.com/ZH3YA4B.png)
+![Client ID image](http://i.imgur.com/i50KbnX.png)
 
 Finally, IssueKit requires [CocoaPods](http://cocoapods.org). Add it to your `Podfile`:
 
