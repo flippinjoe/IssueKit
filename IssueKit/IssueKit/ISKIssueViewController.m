@@ -116,25 +116,12 @@
     else {
         static NSString *dequeueID = @"cell3";
         cell = [tableView dequeueReusableCellWithIdentifier:dequeueID forIndexPath:indexPath];
-        
-        UILabel *buttonLabel = [[UILabel alloc] initWithFrame:cell.contentView.bounds];
-        buttonLabel.textAlignment = NSTextAlignmentCenter;
-        buttonLabel.backgroundColor = [UIColor clearColor];
-        
-        if (IS_IOS7) {
-            buttonLabel.font = cell.textLabel.font;
-            buttonLabel.textColor = cell.textLabel.textColor;
-        }
-    
-        else {
-            buttonLabel.font = [UIFont boldSystemFontOfSize:18.f];
-            buttonLabel.textColor = [UIColor blackColor];
-        }
-        
-        buttonLabel.text = @"Submit";
-        
-        [cell.contentView addSubview:buttonLabel];
-        
+      
+        cell.textLabel.textAlignment = NSTextAlignmentCenter;
+        cell.textLabel.bounds = CGRectMake(0, 0, cell.textLabel.superview.bounds.size.width, cell.textLabel.superview.bounds.size.height);
+              
+        cell.textLabel.text = @"Submit";
+                
         return cell;
     }
 
