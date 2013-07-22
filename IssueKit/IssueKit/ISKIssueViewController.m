@@ -13,8 +13,8 @@
 #import <BlocksKit/BlocksKit.h>
 
 /*
-    Sorry for this nasty macro. iOS 6 cells don't like to give the font & frame size of it's text label before it gets added to the view hierarchy. :(
-*/
+ Sorry for this nasty macro. iOS 6 cells don't like to give the font & frame size of it's text label before it gets added to the view hierarchy. :(
+ */
 
 #define IS_IOS7 !([[[UIDevice currentDevice] systemVersion] floatValue] < 7.0f)
 
@@ -69,7 +69,7 @@
             
             cell.textLabel.text = indexPath.row == 0 ? @"Title" : @"Description";
             [cell.textLabel sizeToFit];
-            
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             CGSize textLabelSize = cell.textLabel.frame.size;
             
             if (!IS_IOS7) {
@@ -77,11 +77,17 @@
                 textLabelSize = CGSizeMake(fontSize.width + 8, fontSize.height);
             }
             
-            CGFloat textFieldWidth = cell.frame.size.width - 20 * 2 - textLabelSize.width;
+            float offset = 20*2;
+            CGFloat textFieldWidth = cell.contentView.bounds.size.width - offset - textLabelSize.width;
             CGFloat textFieldHeight = 40;
             
-            UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(cell.contentView.bounds.size.width - 20 - textFieldWidth, cell.contentView.bounds.size.height / 2 - textFieldHeight / 2, textFieldWidth, textFieldHeight)];
-            
+            CGRect rect = CGRectZero;
+            rect.origin.x = cell.contentView.bounds.size.width - 20 - textFieldWidth;
+            rect.origin.y = cell.contentView.bounds.size.height / 2 - textFieldHeight / 2;
+            rect.size.height = textFieldHeight;
+            rect.size.width = cell.contentView.bounds.size.width - rect.origin.x - 10;
+            UITextField *textField = [[UITextField alloc] initWithFrame:rect];
+            textField.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleWidth;
             textField.tag = 100;
             textField.textAlignment = NSTextAlignmentRight;
             textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
@@ -94,7 +100,7 @@
         else {
             static NSString *dequeueID = @"cell2";
             cell = [tableView dequeueReusableCellWithIdentifier:dequeueID forIndexPath:indexPath];
-            
+            cell.selectionStyle = UITableViewCellSelectionStyleBlue;
             cell.textLabel.text = @"Image upload";
             [cell.textLabel sizeToFit];
             
@@ -116,15 +122,15 @@
     else {
         static NSString *dequeueID = @"cell3";
         cell = [tableView dequeueReusableCellWithIdentifier:dequeueID forIndexPath:indexPath];
-      
+        
         cell.textLabel.textAlignment = NSTextAlignmentCenter;
         cell.textLabel.bounds = CGRectMake(0, 0, cell.textLabel.superview.bounds.size.width, cell.textLabel.superview.bounds.size.height);
-              
+        
         cell.textLabel.text = @"Submit";
-                
+        
         return cell;
     }
-
+    
     
     return nil;
 }
@@ -218,7 +224,7 @@
 
 #pragma mark - Image Picker Delegate
 
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {    
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     [self dismissViewControllerAnimated:YES completion:nil];
     _selectedImage = info[UIImagePickerControllerOriginalImage];
     
