@@ -23,6 +23,7 @@
 @end
 
 @implementation ISKIssueViewController {
+    UIPopoverController *_popoverController;
     UIImage *_selectedImage;
 }
 
@@ -173,7 +174,16 @@
                 pickerController.delegate = self;
                 pickerController.sourceType = sourceType;
                 
-                [self presentViewController:pickerController animated:YES completion:nil];
+                if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+                {
+                    _popoverController = [[UIPopoverController alloc] initWithContentViewController:pickerController];
+                    [_popoverController presentPopoverFromRect:cell.frame
+                                                        inView:cell.superview
+                                      permittedArrowDirections:UIPopoverArrowDirectionAny
+                                                      animated:YES];
+                }
+                else
+                { [self presentViewController:pickerController animated:YES completion:nil]; }
             };
             
             [actionSheet addButtonWithTitle:@"Take a photo" handler:^{
@@ -225,7 +235,13 @@
 #pragma mark - Image Picker Delegate
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    // iPad should dismiss it's popoverController instead of dismissing
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    { [_popoverController dismissPopoverAnimated:YES]; }
+    else
+    { [self dismissViewControllerAnimated:YES completion:nil]; }
+    
     _selectedImage = info[UIImagePickerControllerOriginalImage];
     
     [UIImageJPEGRepresentation(_selectedImage, 0.7) writeToFile:tempImageURL().path atomically:YES];

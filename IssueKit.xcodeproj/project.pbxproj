@@ -21,6 +21,7 @@
 		4126F87E177B8F9C002DC52A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4126F860177B8F9C002DC52A /* UIKit.framework */; };
 		41588ADA177E427C0020981E /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41588AD9177E427C0020981E /* QuickLook.framework */; };
 		50351314F8274426AD63EBCF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13E7D6996A774E2E990E1E04 /* libPods.a */; };
+		D87600E917AA2C2F00A4F856 /* Main~ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D87600E817AA2C2F00A4F856 /* Main~ipad.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		41D44CD7177E0DC300F3E061 /* ISKIssue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ISKIssue.h; path = IssueKit/ISKIssue.h; sourceTree = "<group>"; };
 		41D44CD8177E0DC300F3E061 /* ISKIssue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ISKIssue.m; path = IssueKit/ISKIssue.m; sourceTree = "<group>"; };
 		A6D8F72469D246E597301C57 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		D87600E817AA2C2F00A4F856 /* Main~ipad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Main~ipad.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		4126F862177B8F9C002DC52A /* IssueKit */ = {
 			isa = PBXGroup;
 			children = (
+				D87600E817AA2C2F00A4F856 /* Main~ipad.storyboard */,
 				4126F86B177B8F9C002DC52A /* ISKAppDelegate.h */,
 				4126F86C177B8F9C002DC52A /* ISKAppDelegate.m */,
 				4126F86E177B8F9C002DC52A /* Main.storyboard */,
@@ -255,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D87600E917AA2C2F00A4F856 /* Main~ipad.storyboard in Resources */,
 				4126F875177B8F9C002DC52A /* Images.xcassets in Resources */,
 				4126F867177B8F9C002DC52A /* InfoPlist.strings in Resources */,
 				4126F870177B8F9C002DC52A /* Main.storyboard in Resources */,
@@ -423,13 +427,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IssueKit/IssueKit-Prefix.pch";
 				INFOPLIST_FILE = "IssueKit/IssueKit-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "A1C908ED-2947-42C8-8FAF-0FFE7322EBFA";
+				PROVISIONING_PROFILE = "912BA327-BDD7-4582-BBFD-3D586D62A495";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -440,13 +446,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IssueKit/IssueKit-Prefix.pch";
 				INFOPLIST_FILE = "IssueKit/IssueKit-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "A1C908ED-2947-42C8-8FAF-0FFE7322EBFA";
+				PROVISIONING_PROFILE = "912BA327-BDD7-4582-BBFD-3D586D62A495";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
