@@ -1,3 +1,7 @@
 Pods/
 Podfile.lock
 *.xccheckout
+/IssueKit.xcworkspace/xcuserdata/joe.xcuserdatad/
+/IssueKit.xcodeproj/xcuserdata/joe.xcuserdatad/
+
+/.DS_Store

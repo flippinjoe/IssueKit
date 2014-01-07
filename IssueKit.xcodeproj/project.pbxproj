@@ -65,6 +65,7 @@
 		41D44CD7177E0DC300F3E061 /* ISKIssue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ISKIssue.h; path = IssueKit/ISKIssue.h; sourceTree = "<group>"; };
 		41D44CD8177E0DC300F3E061 /* ISKIssue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ISKIssue.m; path = IssueKit/ISKIssue.m; sourceTree = "<group>"; };
 		A6D8F72469D246E597301C57 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		D834A472187BB84600C85FF0 /* IssueKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IssueKit.podspec; sourceTree = "<group>"; };
 		D87600E817AA2C2F00A4F856 /* Main~ipad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Main~ipad.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +98,7 @@
 		4126F850177B8F9C002DC52A = {
 			isa = PBXGroup;
 			children = (
+				D834A472187BB84600C85FF0 /* IssueKit.podspec */,
 				4126F862177B8F9C002DC52A /* IssueKit */,
 				4126F85B177B8F9C002DC52A /* Frameworks */,
 				A6D8F72469D246E597301C57 /* Pods.xcconfig */,
