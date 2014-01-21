@@ -15,7 +15,7 @@ typedef void (^IssueErrorBlock)(NSError *);
 typedef void (^LabelCreateBlock)(NSString*);
 typedef void (^LabelErrorBlock)(NSError *);
 
-@interface ISKGitHubIssueAPIClient : AFHTTPClient
+@interface ISKGitHubIssueAPIClient : AFHTTPRequestOperationManager
 
 - (instancetype)initWithAPIToken:(NSString *)token;
 

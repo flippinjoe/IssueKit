@@ -8,6 +8,7 @@
 
 #import "ISKImgurAPIClient.h"
 #import <NSData+Base64/NSData+Base64.h>
+#import <AFNetworking/AFNetworkActivityIndicatorManager.h>
 
 #define BASE_URL_STRING @"https://api.imgur.com/3/"
 
@@ -30,10 +31,13 @@
     self = [super initWithBaseURL:url];
     if (!self) return nil;
     
-    [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
-    [self setParameterEncoding:AFFormURLParameterEncoding];
+    [self setResponseSerializer:[AFJSONResponseSerializer serializer]];
+    [self setRequestSerializer:[AFJSONRequestSerializer serializer]];
+//    [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
+//    [self setParameterEncoding:AFFormURLParameterEncoding];
     
-    [self setDefaultHeader:@"Authorization" value:[NSString stringWithFormat:@"Client-ID %@", _clientID]];
+    
+//    [self setDefaultHeader:@"Authorization" value:[NSString stringWithFormat:@"Client-ID %@", _clientID]];
     
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     
@@ -45,7 +49,7 @@
     parameters[@"image"] = [UIImageJPEGRepresentation(image, 0.7) base64EncodedString];
     parameters[@"type"] = @"base64";
     
-    [self postPath:@"image" parameters:parameters.copy success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [self POST:@"image" parameters:parameters.copy success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSError *error;
         NSDictionary *JSONDict = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:&error];
         

@@ -10,7 +10,7 @@
 #import "ISKIssueManager.h"
 
 #import <SVProgressHUD/SVProgressHUD.h>
-#import <BlocksKit/BlocksKit.h>
+#import <BlocksKit/BlocksKit+UIKit.h>
 
 /*
  Sorry for this nasty macro. iOS 6 cells don't like to give the font & frame size of it's text label before it gets added to the view hierarchy. :(
@@ -146,10 +146,10 @@
     }
     
     else if (indexPath.section == 0 && indexPath.row == 2) {
-        UIActionSheet *actionSheet = [UIActionSheet actionSheetWithTitle:@"Image upload"];
+        UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Image upload" delegate:nil cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:nil];
         
         if (_selectedImage) {
-            [actionSheet setDestructiveButtonWithTitle:@"Delete existing photo" handler:^{
+            [actionSheet bk_setDestructiveButtonWithTitle:@"Delete existing photo" handler:^{
                 _selectedImage = nil;
                 [[NSFileManager defaultManager] removeItemAtPath:tempImageURL().path error:nil];
                 
@@ -158,7 +158,7 @@
                 [self.tableView endUpdates];
             }];
             
-            [actionSheet addButtonWithTitle:@"View existing photo" handler:^{
+            [actionSheet bk_addButtonWithTitle:@"View existing photo" handler:^{
                 QLPreviewController *previewController = [[QLPreviewController alloc] init];
                 previewController.dataSource = self;
                 previewController.delegate = self;
@@ -186,16 +186,16 @@
                 { [self presentViewController:pickerController animated:YES completion:nil]; }
             };
             
-            [actionSheet addButtonWithTitle:@"Take a photo" handler:^{
+            [actionSheet bk_addButtonWithTitle:@"Take a photo" handler:^{
                 ShowPickerController(UIImagePickerControllerSourceTypeCamera);
             }];
             
-            [actionSheet addButtonWithTitle:@"Pick a photo" handler:^{
+            [actionSheet bk_addButtonWithTitle:@"Pick a photo" handler:^{
                 ShowPickerController(UIImagePickerControllerSourceTypePhotoLibrary);
             }];
         }
         
-        [actionSheet setCancelButtonWithTitle:@"Cancel" handler:nil];
+        [actionSheet bk_setCancelButtonWithTitle:@"Cancel" handler:nil];
         [actionSheet showInView:self.tableView];
         [tableView deselectRowAtIndexPath:indexPath animated:NO];
     }

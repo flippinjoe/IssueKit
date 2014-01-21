@@ -11,9 +11,9 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.license = {:type => 'MIT', :file => 'LICENSE.md'}
 
-  s.dependency 'AFNetworking', '~> 1.3.2'
+  s.dependency 'AFNetworking', '~> 2.1.0'
   s.dependency 'SVProgressHUD'
   s.dependency 'Mantle'
   s.dependency 'NSData+Base64'
-  s.dependency 'BlocksKit', '~> 1.8.3'
+  s.dependency 'BlocksKit', '~> 2.0.0'
 end

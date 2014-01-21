@@ -8,6 +8,7 @@
 
 #import "ISKGitHubIssueAPIClient.h"
 
+#import <AFNetworking/AFNetworkActivityIndicatorManager.h>
 #define BASE_URL_STRING @"https://api.github.com/"
 
 @implementation ISKGitHubIssueAPIClient {
@@ -29,9 +30,12 @@
     self = [super initWithBaseURL:url];
     if (!self) return nil;
     
-    [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
-    [self setDefaultHeader:@"Accept" value:@"application/vnd.github.beta+json"];
-    [self setParameterEncoding:AFJSONParameterEncoding];
+    [self setResponseSerializer:[AFJSONRequestSerializer serializer]];
+    [self setRequestSerializer:[AFJSONRequestSerializer serializer]];
+    
+//    [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
+//    [self setDefaultHeader:@"Accept" value:@"application/vnd.github.beta+json"];
+//    [self setParameterEncoding:AFJSONParameterEncoding];
     
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     
@@ -49,7 +53,7 @@
     if (issue.assignee) parameters[@"assignee"] = issue.assignee;
     if (issue.labels) parameters[@"labels"] = issue.labels;
     
-    [self postPath:path.copy parameters:parameters.copy success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [self POST:path.copy parameters:parameters.copy success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSError *error;
         id JSONObject = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:&error];
         
@@ -75,7 +79,7 @@
     if (label) parameters[@"name"] = label;
     if (hexColorString) parameters[@"color"] = hexColorString;
     
-    [self postPath:path.copy parameters:parameters.copy success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [self POST:path.copy parameters:parameters.copy success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSError *error;
         id JSONObject = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:&error];
         

@@ -11,7 +11,7 @@
 typedef void (^UploadSuccessfulBlock)(NSURL* imageURL);
 typedef void (^UploadFailedBlock)(NSError *error);
 
-@interface ISKImgurAPIClient : AFHTTPClient
+@interface ISKImgurAPIClient : AFHTTPRequestOperationManager
 
 - (instancetype)initWithClientID:(NSString *)clientID;
 - (void)uploadImage:(UIImage *)image success:(UploadSuccessfulBlock)successBlock error:(UploadFailedBlock)errorBlock;
