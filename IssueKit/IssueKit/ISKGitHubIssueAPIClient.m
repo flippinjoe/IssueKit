@@ -30,10 +30,10 @@
     self = [super initWithBaseURL:url];
     if (!self) return nil;
     
-    [self setResponseSerializer:[AFJSONRequestSerializer serializer]];
+    [self setResponseSerializer:[AFJSONResponseSerializer serializer]];
     [self setRequestSerializer:[AFJSONRequestSerializer serializer]];
     
-    [self.requestSerializer setValue:@"Accept" forHTTPHeaderField:@"application/vnd.github.beta+json"];
+    [self.requestSerializer setValue:@"application/vnd.github.beta+json" forHTTPHeaderField:@"Accept"];
     
 //    [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
 //    [self setDefaultHeader:@"Accept" value:@"application/vnd.github.beta+json"];
@@ -57,7 +57,8 @@
     
     [self POST:path.copy parameters:parameters.copy success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSError *error;
-        id JSONObject = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:&error];
+        id JSONObject = responseObject;
+//        id JSONObject = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:&error];
         
         if (error) {
             errorBlock(error);
@@ -83,7 +84,8 @@
     
     [self POST:path.copy parameters:parameters.copy success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSError *error;
-        id JSONObject = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:&error];
+        id JSONObject = responseObject;
+//        id JSONObject = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:&error];
         
         if (error) {
             errorBlock(error);
