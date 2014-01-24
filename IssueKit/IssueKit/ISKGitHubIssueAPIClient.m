@@ -33,6 +33,8 @@
     [self setResponseSerializer:[AFJSONRequestSerializer serializer]];
     [self setRequestSerializer:[AFJSONRequestSerializer serializer]];
     
+    [self.requestSerializer setValue:@"Accept" forHTTPHeaderField:@"application/vnd.github.beta+json"];
+    
 //    [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
 //    [self setDefaultHeader:@"Accept" value:@"application/vnd.github.beta+json"];
 //    [self setParameterEncoding:AFJSONParameterEncoding];
