@@ -15,5 +15,5 @@ Pod::Spec.new do |s|
   s.dependency 'SVProgressHUD'
   s.dependency 'Mantle'
   s.dependency 'NSData+Base64'
-  s.dependency 'BlocksKit', '~> 2.0.0'
+  s.dependency 'BlocksKit', '~> 2.2.0'
 end
